@@ -49,4 +49,10 @@ public class OrderController {
 
         return this.discoveryClient;
     }
+
+    @GetMapping("/consumer/payment/zipkin")
+    public String paymentZipkin() {
+        String result = restTemplate.getForObject(PaymentSrv_URL + "/payment/zipkin/", String.class);
+        return result;
+    }
 }

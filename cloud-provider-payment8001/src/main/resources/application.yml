@@ -10,6 +10,12 @@ spring:
     url: jdbc:mysql://CentOS100:3306/db2019?useUnicode=true&characterEncoding=utf-8&useSSL=false
     username: root
     password: 123456
+  zipkin:
+    base-url: http://CentOS100:9411
+  sleuth:
+    sampler:
+      #采样率值介于 0 到 1 之间，1 则表示全部采集
+      probability: 1
 
 eureka:
   client:
